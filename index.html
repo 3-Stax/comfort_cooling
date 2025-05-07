@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo/logo_c.jpg" type="image/jpeg">
+    <title>❄️ Comfort Cooling | Modern HVAC Solutions in Namibia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0369a1',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(14,165,233,0.9) 0%, rgba(3,105,161,0.95) 100%);
+        }
+        .brand-logo {
+            filter: grayscale(100%) brightness(0.5);
+            transition: all 0.3s ease;
+        }
+        .brand-logo:hover {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.05);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .value-card:hover .value-icon {
+            transform: rotateY(180deg);
+        }
+        .carousel-slides {
+            width: 400%;
+        }
+        .carousel-slide {
+            width: 25%;
+        }
+        .carousel-slides {
+            transition: transform 0.7s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary animate-fade-in">Comfort<span class="text-secondary">Cooling</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#services" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Services</a>
+                        <a href="#about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About Us</a>
+                        <a href="#values" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Our Values</a>
+                        <a href="#brands" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Brands</a>
+                        <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-secondary transition-colors duration-300 shadow-lg hover:shadow-xl">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About Us</a>
+                <a href="#values" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Our Values</a>
+                <a href="#brands" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Brands</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-secondary">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 animate-slide-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Modern <span class="text-accent">HVAC</span> Solutions
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        Expert installation, repair, and maintenance for industrial, commercial, and residential needs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            Get a Quote
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition-colors duration-300">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block md:w-1/2 relative h-96">
+                    <!-- Carousel container -->
+                    <div class="carousel-container relative h-full w-full rounded-xl shadow-2xl overflow-hidden">
+                        <!-- Carousel slides -->
+                        <div class="carousel-slides flex h-full transition-transform duration-700 ease-in-out">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full">
+                                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                                     alt="HVAC System" 
+                                     class="w-full h-full object-cover rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full">
+                                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                                     alt="HVAC Technician" 
+                                     class="w-full h-full object-cover rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full">
+                                <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                                     alt="Commercial HVAC" 
+                                     class="w-full h-full object-cover rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide flex-shrink-0 w-full h-full">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c811e6aef908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                                     alt="HVAC Maintenance" 
+                                     class="w-full h-full object-cover rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation buttons -->
+                        <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-primary p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-300 z-10">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-primary p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-300 z-10">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Indicators -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300"></button>
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300"></button>
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300"></button>
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive HVAC solutions tailored to your specific needs, ensuring optimal performance and energy efficiency.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition-all duration-300 animate-scale-in">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-snowflake text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-dark mb-3">Efficient Refrigeration Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Keeping your systems running reliably and efficiently year-round with our expert maintenance and repair services.
+                        </p>
+                        <a href="#contact" class="text-primary font-medium hover:text-secondary transition-colors duration-300">
+                            Learn more →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition-all duration-300 animate-scale-in" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-home text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-dark mb-3">Residential HVAC</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete home comfort solutions including installation, maintenance, and repair of all residential HVAC systems.
+                        </p>
+                        <a href="#contact" class="text-primary font-medium hover:text-secondary transition-colors duration-300">
+                            Learn more →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition-all duration-300 animate-scale-in" style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-building text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-dark mb-3">Commercial Solutions</h3>
+                        <p class="text-gray-600 mb-4">
+                            Customized HVAC systems for businesses, offices, and commercial properties to ensure productivity and comfort.
+                        </p>
+                        <a href="#contact" class="text-primary font-medium hover:text-secondary transition-colors duration-300">
+                            Learn more →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-slide-up">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="HVAC Technicians" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 animate-slide-up" style="animation-delay: 0.2s;">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8">About Us</h2>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-primary mb-3">Our Vision</h3>
+                        <p class="text-gray-600">
+                            To be Namibia's leading and most innovative HVAC and refrigeration service provider.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-primary mb-3">Our Mission</h3>
+                        <p class="text-gray-600">
+                            To deliver cutting-edge cooling solutions with professionalism and a commitment to sustainability.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Our Values</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Integrity in all our dealings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Commitment to quality service</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Continuous innovation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Exceptional customer experience</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Core Values</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    The principles that guide everything we do at Comfort Cooling
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md value-card transition-all duration-300 animate-scale-in">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <div class="value-icon w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-2xl transition-transform duration-500">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Innovation & Excellence</h3>
+                    <p class="text-gray-600">
+                        We are committed to continuous improvement and adopting the latest technologies to provide superior service.
+                    </p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md value-card transition-all duration-300 animate-scale-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <div class="value-icon w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center text-2xl transition-transform duration-500">
+                            <i class="fas fa-people-group"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Collaborative Teamwork</h3>
+                    <p class="text-gray-600">
+                        We foster a culture of collaboration and respect, leveraging the diverse talents of our team to achieve outstanding results.
+                    </p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md value-card transition-all duration-300 animate-scale-in" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <div class="value-icon w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-2xl transition-transform duration-500">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Sustainable Reliability</h3>
+                    <p class="text-gray-600">
+                        We prioritize reliable and energy-efficient solutions, contributing to a sustainable future for our clients and community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Section -->
+    <section id="brands" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark mb-4">Trusted Brands We Work With</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    We partner with the industry's leading brands to deliver quality and reliability
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center animate-slide-up">
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Daikin_Industries_logo.svg/2560px-Daikin_Industries_logo.svg.png" alt="Daikin" class="h-12 brand-logo opacity-70 hover:opacity-100">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Danfoss_logo.svg/2560px-Danfoss_logo.svg.png" alt="Danfoss" class="h-10 brand-logo opacity-70 hover:opacity-100">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/GREE_logo.svg/1200px-GREE_logo.svg.png" alt="Gree" class="h-10 brand-logo opacity-70 hover:opacity-100">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Midea_2020.svg/1200px-Midea_2020.svg.png" alt="Midea" class="h-10 brand-logo opacity-70 hover:opacity-100">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" class="h-8 brand-logo opacity-70 hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-slide-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Connect With Us</h2>
+                    <p class="text-lg opacity-90 mb-8">
+                        Ready to discuss your HVAC needs? Contact us today for a consultation or quote.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Our Location</h4>
+                                <p class="opacity-90">Windhoek, Namibia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Call Us</h4> 
+                                <p class="opacity-90">+264 81 468 4428</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email Us</h4>
+                                <p class="opacity-90">info@comfortcooling.na</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="bg-white rounded-xl shadow-xl p-8 text-gray-800">
+                        <h3 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-secondary transition-colors duration-300 shadow-md">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white">Comfort<span class="text-primary">Cooling</span></a>
+                    <p class="mt-4 text-gray-400 max-w-xs">
+                        Modern HVAC solutions for industrial, commercial, and residential needs in Namibia.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                            <li><a href="#values" class="text-gray-400 hover:text-white transition-colors duration-300">Our Values</a></li>
+                            <li><a href="#brands" class="text-gray-400 hover:text-white transition-colors duration-300">Brands</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Refrigeration</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Residential HVAC</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Commercial HVAC</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Maintenance</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400">Windhoek, Namibia</li>
+                            <li class="text-gray-400">+264 81 468 4428</li>
+                            <li class="text-gray-400">info@comfortcooling.na</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Comfort Cooling. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-secondary">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    </body>
+    </html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
